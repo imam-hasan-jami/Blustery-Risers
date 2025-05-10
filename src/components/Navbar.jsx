@@ -46,7 +46,7 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <img className="w-10" src="https://i.ibb.co.com/wFjq79n6/blustery-logo-black.png" alt="" />
+        <img className="w-10 mr-4" src="https://i.ibb.co.com/wFjq79n6/blustery-logo-black.png" alt="" />
       </div>
     </div>
   );
