@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from '../components/Slider';
+import TagLine from '../components/TagLine';
 
 const Home = () => {
     return (
@@ -7,6 +8,9 @@ const Home = () => {
             <div>
                 <Slider />
             </div>
+            {/* <div>
+                <TagLine />
+            </div> */}
         </div>
     );
 };
