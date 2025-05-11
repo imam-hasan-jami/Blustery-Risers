@@ -3,7 +3,7 @@ import React from 'react';
 const Slider = () => {
     return (
         <div>
-            <div className="carousel carousel-center rounded-b-box shadow-lg">
+            <div className="carousel carousel-center rounded-b-box shadow-xl">
                 {/* <div className="carousel-item">
                     <img className='w-70 h-100 object-cover' src="https://i.ibb.co.com/N64qZPHH/profile-pic.jpg" alt="Profile Picture" />
                 </div> */}
