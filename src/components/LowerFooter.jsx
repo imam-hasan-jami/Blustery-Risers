@@ -8,7 +8,7 @@ const LowerFooter = () => {
           Developed By Imam Hasan Sadi
         </h1>
         <div className="flex justify-center gap-4 mt-4">
-          <a href="https://www.facebook.com/BlusteryRisers" target="_blank">
+          <a href="https://www.facebook.com/cristiano7sadi/" target="_blank">
             <FaFacebookSquare size={25} />
           </a>
           <a href="https://www.instagram.com/chainless_slave1.0/" target="_blank">
