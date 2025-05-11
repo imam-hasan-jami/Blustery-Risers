@@ -3,6 +3,7 @@ import HomeLayout from "../layouts/HomeLayout";
 import Home from "../pages/Home";
 import Loading from "../pages/Loading";
 import ErrorPage from "../pages/ErrorPage";
+import PlayerDetails from "../pages/PlayerDetails";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,12 @@ const router = createBrowserRouter([
               
               return { players, reviews };
             },
+            hydrateFallbackElement: <Loading />,
+        },
+        {
+            path: "/player-details/:id",
+            Component: PlayerDetails,
+            loader: () => fetch("/players.json"),
             hydrateFallbackElement: <Loading />,
         }
     ]
