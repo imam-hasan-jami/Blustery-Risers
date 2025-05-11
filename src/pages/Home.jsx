@@ -4,6 +4,7 @@ import AboutUs from '../components/AboutUs';
 import Team from '../components/Team';
 import TagLine from '../components/TagLine';
 import PlayersContainer from '../components/PlayersContainer';
+import ReviewsContainer from '../components/ReviewsContainer';
 
 
 const Home = () => {
@@ -24,6 +25,9 @@ const Home = () => {
             </div>
             <div>
                 <PlayersContainer />
+            </div>
+            <div>
+                <ReviewsContainer />
             </div>
         </div>
     );

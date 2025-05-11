@@ -13,7 +13,15 @@ const router = createBrowserRouter([
         {
             index: true,
             Component: Home,
-            loader: () => fetch("/players.json"),
+            loader: async () => {
+              const playersResponse = await fetch("/players.json");
+              const players = await playersResponse.json();
+              
+              const reviewsResponse = await fetch("/reviews.json");
+              const reviews = await reviewsResponse.json();
+              
+              return { players, reviews };
+            },
             hydrateFallbackElement: <Loading />,
         }
     ]
