@@ -1,7 +1,8 @@
 import React from 'react';
 import Slider from '../components/Slider';
-import TagLine from '../components/TagLine';
 import AboutUs from '../components/AboutUs';
+import Team from '../components/Team';
+
 
 const Home = () => {
     return (
@@ -14,6 +15,9 @@ const Home = () => {
             </div> */}
             <div>
                 <AboutUs />
+            </div>
+            <div>
+                <Team />
             </div>
         </div>
     );
