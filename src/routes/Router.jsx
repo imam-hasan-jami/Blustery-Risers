@@ -5,6 +5,7 @@ import Loading from "../pages/Loading";
 import ErrorPage from "../pages/ErrorPage";
 import PlayerDetails from "../pages/PlayerDetails";
 import Fixture from "../pages/Fixture";
+import Jersey from "../pages/Jersey";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
         {
             path: "/fixture",
             Component: Fixture,
+        },
+        {
+            path: "/jersey",
+            Component: Jersey,
         }
     ]
   },
