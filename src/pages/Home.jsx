@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from '../components/Slider';
 import AboutUs from '../components/AboutUs';
 import Team from '../components/Team';
+import TagLine from '../components/TagLine';
 import PlayersContainer from '../components/PlayersContainer';
 
 
@@ -11,13 +12,14 @@ const Home = () => {
             <div>
                 <Slider />
             </div>
-            {/* <div>
+            <div>
                 <TagLine />
-            </div> */}
+            </div>
             <div>
                 <AboutUs />
             </div>
             <div>
+                {/* manager */}
                 <Team />
             </div>
             <div>
