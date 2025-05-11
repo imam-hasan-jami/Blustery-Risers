@@ -6,6 +6,8 @@ import ErrorPage from "../pages/ErrorPage";
 import PlayerDetails from "../pages/PlayerDetails";
 import Fixture from "../pages/Fixture";
 import Jersey from "../pages/Jersey";
+import Achievements from "../pages/Achievements";
+import OldSquad from "../pages/OldSquad";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +42,14 @@ const router = createBrowserRouter([
         {
             path: "/jersey",
             Component: Jersey,
+        },
+        {
+            path: "/achievements",
+            Component: Achievements,
+        },
+        {
+            path: "/old-squad",
+            Component: OldSquad,
         }
     ]
   },
