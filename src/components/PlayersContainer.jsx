@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router";
 import PlayerCard from "./PlayerCard";
 
 const PlayersContainer = () => {
-  const players = useLoaderData();
+  const { players } = useLoaderData();
   const [displayPlayers, setDisplayPlayers] = useState([]);
   const [showAll, setShowAll] = useState(false);
 
