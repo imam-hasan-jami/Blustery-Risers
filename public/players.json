@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Turjo",
-        "photoURL": "https://example.com/turjo.jpg",
+        "photoURL": "https://i.ibb.co.com/wh07vhxk/player-turjo.jpg",
         "jerseyNumber" : 23,
         "position": "Goalkeeper",
         "school": "Comilla Zilla School",
@@ -14,7 +14,7 @@
     {
         "id": 2,
         "name": "Himel",
-        "photoURL": "https://example.com/turjo.jpg",
+        "photoURL": "https://i.ibb.co.com/PZ3pnQ7m/player-himel.jpg",
         "jerseyNumber" : 1,
         "position": "Goalkeeper",
         "school": "Comilla Zilla School",
@@ -26,7 +26,7 @@
     {
         "id": 3,
         "name": "Riaz",
-        "photoURL": "https://example.com/turjo.jpg",
+        "photoURL": "https://i.ibb.co.com/1fR5HFnQ/player-riaz.jpg",
         "jerseyNumber" : 4,
         "position": "Center Back",
         "school": "Comilla Zilla School",
@@ -38,7 +38,7 @@
     {
         "id": 4,
         "name": "T H Mahi",
-        "photoURL": "https://example.com/turjo.jpg",
+        "photoURL": "https://i.ibb.co.com/VpMchg5z/player-t-h-mahi.jpg",
         "jerseyNumber" : 5,
         "position": "Center Back",
         "school": "Comilla Zilla School",
@@ -50,7 +50,7 @@
     {
         "id": 5,
         "name": "Sohel",
-        "photoURL": "https://example.com/turjo.jpg",
+        "photoURL": "https://i.ibb.co.com/cWx33Hq/player-sohel.jpg",
         "jerseyNumber" : 17,
         "position": "Left Back",
         "school": "Comilla Zilla School",
@@ -62,7 +62,7 @@
     {
         "id": 6,
         "name": "Shovon",
-        "photoURL": "https://example.com/turjo.jpg",
+        "photoURL": "https://i.ibb.co.com/G3MBPZMf/player-shovon.jpg",
         "jerseyNumber" : 19,
         "position": "Right Back",
         "school": "Comilla Zilla School",
@@ -74,7 +74,7 @@
     {
         "id": 7,
         "name": "Sadi",
-        "photoURL": "https://example.com/turjo.jpg",
+        "photoURL": "https://i.ibb.co.com/cKCXZ56g/player-sadi-2.jpg",
         "jerseyNumber" : 7,
         "position": "Center Midfielder",
         "school": "Comilla Zilla School",
@@ -86,7 +86,7 @@
     {
         "id": 8,
         "name": "Shawon",
-        "photoURL": "https://example.com/turjo.jpg",
+        "photoURL": "https://i.ibb.co.com/6cSBMFdw/player-shawon.jpg",
         "jerseyNumber" : 14,
         "position": "Center Midfielder",
         "school": "Comilla Zilla School",
@@ -97,68 +97,8 @@
     },
     {
         "id": 9,
-        "name": "Jalal",
-        "photoURL": "https://example.com/turjo.jpg",
-        "jerseyNumber" : 11,
-        "position": "Attacking Midfielder",
-        "school": "Comilla Zilla School",
-        "batch" : 2018,
-        "age": 23,
-        "nationality": "Bangladesh",
-        "preferredFoot": "Both"
-    },
-    {
-        "id": 10,
-        "name": "Titash",
-        "photoURL": "https://example.com/turjo.jpg",
-        "jerseyNumber" : 10,
-        "position": "Center Forward",
-        "school": "Comilla Zilla School",
-        "batch" : 2018,
-        "age": 23,
-        "nationality": "Bangladesh",
-        "preferredFoot": "Right"
-    },
-    {
-        "id": 11,
-        "name": "Mahi",
-        "photoURL": "https://example.com/turjo.jpg",
-        "jerseyNumber" : 7,
-        "position": "Center Forward",
-        "school": "Comilla Zilla School",
-        "batch" : 2023,
-        "age": 19,
-        "nationality": "Bangladesh",
-        "preferredFoot": "Right"
-    },
-    {
-        "id": 12,
-        "name": "Rakib",
-        "photoURL": "https://example.com/turjo.jpg",
-        "jerseyNumber" : 9,
-        "position": "Center Forward",
-        "school": "Comilla Zilla School",
-        "batch" : 2025,
-        "age": 17,
-        "nationality": "Bangladesh",
-        "preferredFoot": "Right"
-    },
-    {
-        "id": 13,
-        "name": "Limon",
-        "photoURL": "https://example.com/turjo.jpg",
-        "jerseyNumber" : 17,
-        "position": "Right Winger",
-        "school": "Comilla Zilla School",
-        "batch" : 2023,
-        "age": 19,
-        "nationality": "Bangladesh",
-        "preferredFoot": "Right"
-    },
-    {
-        "id": 14,
         "name": "Nafiz",
-        "photoURL": "https://example.com/turjo.jpg",
+        "photoURL": "https://i.ibb.co.com/CNtNqvL/player-nafiz.jpg",
         "jerseyNumber" : 33,
         "position": "Center Midfielder",
         "school": "Comilla Zilla School",
@@ -168,14 +108,74 @@
         "preferredFoot": "Right"
     },
     {
-        "id": 15,
+        "id": 10,
         "name": "Omar",
-        "photoURL": "https://example.com/turjo.jpg",
+        "photoURL": "https://i.ibb.co.com/v6jRnTX5/player-omar.jpg",
         "jerseyNumber" : 17,
         "position": "Center Midfielder",
         "school": "Comilla Zilla School",
         "batch" : 2024,
         "age": 18,
+        "nationality": "Bangladesh",
+        "preferredFoot": "Right"
+    },
+    {
+        "id": 11,
+        "name": "Jalal",
+        "photoURL": "https://i.ibb.co.com/DPGjmCCm/player-jalal.jpg",
+        "jerseyNumber" : 11,
+        "position": "Attacking Midfielder",
+        "school": "Comilla Zilla School",
+        "batch" : 2018,
+        "age": 23,
+        "nationality": "Bangladesh",
+        "preferredFoot": "Both"
+    },
+    {
+        "id": 12,
+        "name": "Titash",
+        "photoURL": "https://i.ibb.co.com/MjqFrGp/manager-titash.jpg",
+        "jerseyNumber" : 10,
+        "position": "Center Forward",
+        "school": "Comilla Zilla School",
+        "batch" : 2018,
+        "age": 23,
+        "nationality": "Bangladesh",
+        "preferredFoot": "Right"
+    },
+    {
+        "id": 13,
+        "name": "Mahi",
+        "photoURL": "https://i.ibb.co.com/CK4YMMjn/player-mahi.jpg",
+        "jerseyNumber" : 7,
+        "position": "Center Forward",
+        "school": "Comilla Zilla School",
+        "batch" : 2023,
+        "age": 19,
+        "nationality": "Bangladesh",
+        "preferredFoot": "Right"
+    },
+    {
+        "id": 14,
+        "name": "Rakib",
+        "photoURL": "https://i.ibb.co.com/G3c6rHkT/player-rakib.jpg",
+        "jerseyNumber" : 9,
+        "position": "Center Forward",
+        "school": "Comilla Zilla School",
+        "batch" : 2025,
+        "age": 17,
+        "nationality": "Bangladesh",
+        "preferredFoot": "Right"
+    },
+    {
+        "id": 15,
+        "name": "Limon",
+        "photoURL": "https://i.ibb.co.com/TBVPvV57/player-limon.jpg",
+        "jerseyNumber" : 17,
+        "position": "Right Winger",
+        "school": "Comilla Zilla School",
+        "batch" : 2023,
+        "age": 19,
         "nationality": "Bangladesh",
         "preferredFoot": "Right"
     }
