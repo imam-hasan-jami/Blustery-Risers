@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Loading from "../pages/Loading";
 import ErrorPage from "../pages/ErrorPage";
 import PlayerDetails from "../pages/PlayerDetails";
+import Fixture from "../pages/Fixture";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
             Component: PlayerDetails,
             loader: () => fetch("/players.json"),
             hydrateFallbackElement: <Loading />,
+        },
+        {
+            path: "/fixture",
+            Component: Fixture,
         }
     ]
   },
