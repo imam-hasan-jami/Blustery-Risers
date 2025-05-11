@@ -1,6 +1,6 @@
 import React from "react";
 import { HiMenuAlt1 } from "react-icons/hi";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const Navbar = () => {
 
@@ -48,6 +48,16 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
+            to="/old-squad"
+            className={({ isActive }) =>
+              isActive ? "bg-neutral text-white p-2 rounded-sm" : "p-2"
+            }
+          >
+            Old Squad
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
             to="/contact-us"
             className={({ isActive }) =>
               isActive ? "bg-neutral text-white p-2 rounded-sm" : "p-2"
@@ -73,7 +83,7 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="text-md font-semibold">BLUSTERY RISERS</a>
+        <Link to="/" className="text-md font-semibold">BLUSTERY RISERS</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -81,7 +91,9 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <img className="w-10 mr-4" src="https://i.ibb.co.com/wFjq79n6/blustery-logo-black.png" alt="" />
+        <Link to="/">
+          <img className="w-10 mr-4" src="https://i.ibb.co.com/wFjq79n6/blustery-logo-black.png" alt="" />
+        </Link>
       </div>
     </div>
   );
