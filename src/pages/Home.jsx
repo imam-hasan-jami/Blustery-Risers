@@ -5,6 +5,7 @@ import Team from '../components/Team';
 import TagLine from '../components/TagLine';
 import PlayersContainer from '../components/PlayersContainer';
 import ReviewsContainer from '../components/ReviewsContainer';
+import JoinUs from '../components/JoinUs';
 
 
 const Home = () => {
@@ -28,6 +29,9 @@ const Home = () => {
             </div>
             <div>
                 <ReviewsContainer />
+            </div>
+            <div>
+                <JoinUs />
             </div>
         </div>
     );
