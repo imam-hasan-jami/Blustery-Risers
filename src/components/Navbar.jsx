@@ -5,24 +5,59 @@ import { NavLink } from "react-router";
 const Navbar = () => {
 
     const links = (
-        <>
-            <li>
-                <NavLink to="/">Home</NavLink>
-            </li>
-            <li>
-                <NavLink to="/">Fixture</NavLink>
-            </li>
-            <li>
-                <NavLink to="/">Jersey</NavLink>
-            </li>
-            <li>
-                <NavLink to="/">Achievements</NavLink>
-            </li>
-            <li>
-                <NavLink to="/">Contact Us</NavLink>
-            </li>
-        </>
-    )
+      <>
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "bg-neutral text-white p-2 rounded-sm" : "p-2"
+            }
+          >
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/fixture"
+            className={({ isActive }) =>
+              isActive ? "bg-neutral text-white p-2 rounded-sm" : "p-2"
+            }
+          >
+            Fixture
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/jersey"
+            className={({ isActive }) =>
+              isActive ? "bg-neutral text-white p-2 rounded-sm" : "p-2"
+            }
+          >
+            Jersey
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/achievements"
+            className={({ isActive }) =>
+              isActive ? "bg-neutral text-white p-2 rounded-sm" : "p-2"
+            }
+          >
+            Achievements
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/contact-us"
+            className={({ isActive }) =>
+              isActive ? "bg-neutral text-white p-2 rounded-sm" : "p-2"
+            }
+          >
+            Contact Us
+          </NavLink>
+        </li>
+      </>
+    );
 
   return (
     <div className="navbar bg-base-100 shadow-sm">
