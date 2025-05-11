@@ -73,10 +73,10 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link to="/" className="text-md font-semibold">BLUSTERY RISERS</Link>
+        <Link to="/" className="text-md lg:text-2xl font-semibold lg:font-bold lg:ml-4">BLUSTERY RISERS</Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="menu menu-horizontal px-1 space-x-6">
           {links}
         </ul>
       </div>
