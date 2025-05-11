@@ -56,16 +56,6 @@ const Navbar = () => {
             Old Squad
           </NavLink>
         </li>
-        <li>
-          <NavLink
-            to="/contact-us"
-            className={({ isActive }) =>
-              isActive ? "bg-neutral text-white p-2 rounded-sm" : "p-2"
-            }
-          >
-            Contact Us
-          </NavLink>
-        </li>
       </>
     );
 
