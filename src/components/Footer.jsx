@@ -10,10 +10,10 @@ const Footer = () => {
   return (
     <footer className="footer footer-horizontal footer-center text-base-content rounded mt-20 mb-10">
       <nav className="grid grid-flow-col gap-4">
+        <a className="link link-hover font-grotesk text-gray-600 font-medium">Fixture</a>
         <a className="link link-hover font-grotesk text-gray-600 font-medium">Jersey</a>
         <a className="link link-hover font-grotesk text-gray-600 font-medium">Achievement</a>
         <a className="link link-hover font-grotesk text-gray-600 font-medium">Old Squad</a>
-        <a className="link link-hover font-grotesk text-gray-600 font-medium">Contact Us</a>
       </nav>
       <nav>
         <div className="grid grid-flow-col gap-4">
