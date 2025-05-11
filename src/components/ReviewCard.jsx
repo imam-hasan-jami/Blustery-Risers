@@ -12,10 +12,10 @@ const ReviewCard = ({ review }) => {
             src={photoURL}
             alt={name}
           />
-          <h3 className="font-bold text-xl">{name}</h3>
-          <p className="font-grotesk text-sm text-gray-500 font-light">{figure}</p>
+          <h3 className="font-bold text-xl lg:text-2xl">{name}</h3>
+          <p className="font-grotesk text-sm lg:text-lg text-gray-500 font-light">{figure}</p>
         </div>
-        <p className="font-grotesk text-gray-700">"{comment}"</p>
+        <p className="font-grotesk text-gray-700 lg:text-xl lg:font-semibold">"{comment}"</p>
       </div>
     );
 };
