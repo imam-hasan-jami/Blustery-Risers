@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const PlayerCard = ({ player }) => {
 
-    const { id, name, photoURL, jerseyNumber, position, school, batch } = player;
+    const { id, name, photoURL, position } = player;
 
     return (
       <div>
@@ -19,7 +20,7 @@ const PlayerCard = ({ player }) => {
             <p className="font-grotesk text-gray-600 text-center font-medium">
                 {position}
             </p>
-            <p className="font-grotesk text-gray-600 text-center font-medium">
+            {/* <p className="font-grotesk text-gray-600 text-center font-medium">
                 Number: {jerseyNumber}
             </p>
             <p className="font-grotesk text-gray-600 text-center font-medium">
@@ -27,12 +28,12 @@ const PlayerCard = ({ player }) => {
             </p>
             <p className="font-grotesk text-gray-600 text-center font-medium">
                 Batch: {batch}
-            </p>
+            </p> */}
           </div>
-          <div>
-            <button className="btn btn-neutral mt-4 mx-auto block">
+          <div className='flex justify-center mt-4'>
+            <Link to={`/player-details/${id}`} className="btn btn-neutral">
               View Details
-            </button>
+            </Link>
           </div>
         </div>
       </div>
