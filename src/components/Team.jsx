@@ -19,7 +19,7 @@ const Team = () => {
                     </div>
                 </div>
             </div>
-            <div className='mt-15'>
+            {/* <div className='mt-15'>
                 <h1 className='text-2xl font-bold font-grotesk'>Players</h1>
                 <div className='grid grid-cols-1 mt-4 gap-5'>
                     <div className='bg-base-300 rounded-lg shadow-lg'>
@@ -28,7 +28,7 @@ const Team = () => {
                         <p className='font-grotesk text-gray-600 text-center mt-2 mb-5'>Goalkeeper</p>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };

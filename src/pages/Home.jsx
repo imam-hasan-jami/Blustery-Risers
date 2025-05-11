@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from '../components/Slider';
 import AboutUs from '../components/AboutUs';
 import Team from '../components/Team';
+import PlayersContainer from '../components/PlayersContainer';
 
 
 const Home = () => {
@@ -18,6 +19,9 @@ const Home = () => {
             </div>
             <div>
                 <Team />
+            </div>
+            <div>
+                <PlayersContainer />
             </div>
         </div>
     );
