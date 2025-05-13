@@ -3,7 +3,7 @@ import { RiMessengerLine } from 'react-icons/ri';
 
 const Jersey = () => {
     return (
-        <div className='mt-8'>
+        <div className='lg:w-8/12 lg:mx-auto mt-8'>
             <h1 className='font-grotesk text-3xl text-center font-semibold'>Official Jersey for <br /> CZS Super Cup 2025</h1>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 mt-10'>
                 <div className='bg-base-300 flex flex-col justify-center items-center gap-5 px-4 py-7 rounded-lg shadow-lg'>
@@ -16,8 +16,8 @@ const Jersey = () => {
                 </div>
             </div>
 
-            <div className='mt-10'>
-                <p className='font-grotesk text-xl font-medium'>If you wish to purchase the jersey or have any inquiries, please contact the following accounts.</p>
+            <div className='mt-10 lg:mt-20'>
+                <p className='font-grotesk text-xl lg:text-2xl font-medium'>If you wish to purchase the jersey or have any inquiries, please contact the following accounts.</p>
             </div>
 
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 mt-10'>
