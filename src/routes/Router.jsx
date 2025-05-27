@@ -10,6 +10,7 @@ import Achievements from "../pages/Achievements";
 import OldSquad from "../pages/OldSquad";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
+import AddOldPlayer from "../pages/AddOldPlayer";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
         {
             path: "/old-squad",
             Component: OldSquad,
+        },
+        {
+            path: "/add-old-player",
+            Component: AddOldPlayer,
         },
         // {
         //     path: "/register",
