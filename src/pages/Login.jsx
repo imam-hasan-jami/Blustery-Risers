@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { use } from 'react';
 import { Link } from 'react-router';
+import { AuthContext } from '../provider/AuthContext';
 
 const Login = () => {
 
+    const { loginUser } = use(AuthContext);
+
     const handleLogin = (e) => {
-        e.preventDefault();
-    }
+      e.preventDefault();
+
+      const email = e.target.email.value;
+      const password = e.target.password.value;
+
+      loginUser(email, password)
+        .then((result) => {
+          const user = result.user;
+          console.log(user);
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorCode, errorMessage);
+        });
+    };
 
     return (
     <div className="flex justify-center min-h-[calc(100vh-220px)] items-center">
@@ -22,9 +39,9 @@ const Login = () => {
               type="email"
               className="input"
               placeholder="Email"
-            //   onChange={(e) => setEmail(e.target.value)}
               required
             />
+
             {/* passowrd  */}
             <label className="label">Password</label>
             <input
@@ -34,15 +51,6 @@ const Login = () => {
               placeholder="Password"
               required
             />
-            {/* <div>
-              <Link to={`/auth/forget-password?email=${encodeURIComponent(email)}`} className="link link-hover">Forgot password?</Link>
-            </div> */}
-
-            {/* {error && (
-              <p className="text-red-500 text-xs font-semibold text-center mt-3">
-                {error}
-              </p>
-            )} */}
 
             <button type="submit" className="btn btn-neutral mt-4">
               Login
