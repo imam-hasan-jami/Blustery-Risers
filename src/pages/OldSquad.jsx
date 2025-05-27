@@ -35,7 +35,7 @@ const OldSquad = () => {
             </div>
             <div className="flex justify-center mt-4">
               <Link
-                to={`/player-details/${player._id}`}
+                to={`/old-player-details/${player._id}`}
                 className="btn btn-neutral"
               >
                 View Details

@@ -56,7 +56,7 @@ const AddOldPlayer = () => {
                 name="name"
                 type="text"
                 className="input w-full"
-                placeholder="Plant Name"
+                placeholder="Player Name"
                 required
               />
             </fieldset>
@@ -66,7 +66,7 @@ const AddOldPlayer = () => {
                 name="position"
                 type="text"
                 className="input w-full"
-                placeholder="Plant Name"
+                placeholder="Player's Position"
                 required
               />
             </fieldset>
@@ -76,7 +76,7 @@ const AddOldPlayer = () => {
                 name="jerseyNumber"
                 type="number"
                 className="input w-full"
-                placeholder="Plant Name"
+                placeholder="Player's Jersey Number"
                 required
               />
             </fieldset>
@@ -86,9 +86,28 @@ const AddOldPlayer = () => {
                 name="school"
                 type="text"
                 className="input w-full"
-                placeholder="Plant Name"
+                placeholder="Player's School"
                 required
               />
+            </fieldset>
+            <fieldset className={`fieldset rounded-box border p-4 bg-base-200 border-base-300`}>
+              <label className={`label`}>Player's Batch</label>
+              <input
+                name="batch"
+                type="text"
+                className="input w-full"
+                placeholder="Player's Batch"
+                required
+              />
+            </fieldset>
+            <fieldset className={`fieldset rounded-box border p-4 bg-base-200 border-base-300`}>
+              <label className={`label`}>Preferred Foot:</label>
+              <select name="prefferedFoot" className="select w-full" required>
+                <option value="">Select Preffered Foot</option>
+                <option value="right">Right</option>
+                <option value="left">Left</option>
+                <option value="both">Both</option>
+              </select>
             </fieldset>
             <fieldset className={`fieldset rounded-box border p-4 bg-base-200 border-base-300`}>
               <label className={`label`}>Date of Birth:</label>

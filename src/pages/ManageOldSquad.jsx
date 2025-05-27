@@ -27,7 +27,7 @@ const ManageOldSquad = () => {
                 <td>{player.position}</td>
                 <td className="flex flex-col lg:flex-row items-center gap-2">
                   <Link
-                    to={`/player-details/${player._id}`}
+                    to={`/old-player-details/${player._id}`}
                     className="btn btn-info w-full"
                   >
                     Details
