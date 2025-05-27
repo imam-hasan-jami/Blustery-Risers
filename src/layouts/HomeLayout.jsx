@@ -7,7 +7,7 @@ import LowerFooter from "../components/LowerFooter";
 const HomeLayout = () => {
   return (
     <div>
-      <header className="w-11/12 mx-auto">
+      <header>
         <nav>
           <Navbar />
         </nav>
