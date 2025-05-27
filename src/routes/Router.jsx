@@ -8,6 +8,8 @@ import Fixture from "../pages/Fixture";
 import Jersey from "../pages/Jersey";
 import Achievements from "../pages/Achievements";
 import OldSquad from "../pages/OldSquad";
+import Register from "../pages/Register";
+import Login from "../pages/Login";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +52,14 @@ const router = createBrowserRouter([
         {
             path: "/old-squad",
             Component: OldSquad,
+        },
+        {
+            path: "/register",
+            Component: Register,
+        },
+        {
+            path: "/login",
+            Component: Login,
         }
     ]
   },
