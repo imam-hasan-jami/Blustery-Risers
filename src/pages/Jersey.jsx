@@ -32,7 +32,7 @@ const Jersey = () => {
                     <a className='btn bg-[#1A77F2] text-white border-[#005fd8] mt-6' href="https://www.facebook.com/jisan.anondo.3" target='_blank'> <RiMessengerLine size={20} /> Send Message</a>
                 </div>
                 <div className='bg-base-300 flex flex-col justify-center items-center px-4 py-7 rounded-lg shadow-lg'>
-                    <img className='bg-white border-black w-15 h-15 object-cover rounded-full' src="https://i.ibb.co/b5dW39Fy/titash.jpg" alt="Titash DP" />
+                    <img className='bg-white border-black w-15 h-15 object-cover rounded-full' src="https://i.ibb.co/ZpSRTjd1/titash.jpg" alt="Titash DP" />
                     <h2 className='font-grotesk text-xl font-medium mt-2'>MD. Kamruzzaman Titash</h2>
                     <a className='btn bg-[#1A77F2] text-white border-[#005fd8] mt-6' href="https://www.facebook.com/titash786" target='_blank'> <RiMessengerLine size={20} /> Send Message</a>
                 </div>
