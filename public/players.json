@@ -18,8 +18,8 @@
         "jerseyNumber" : 1,
         "position": "Goalkeeper",
         "school": "Comilla Zilla School",
-        "batch" : 2023,
-        "age": 19,
+        "batch" : 2020,
+        "age": 22,
         "nationality": "Bangladesh",
         "preferredFoot": "Right"
     },
@@ -51,6 +51,18 @@
         "id": 5,
         "name": "Sohel",
         "photoURL": "https://i.ibb.co.com/cWx33Hq/player-sohel.jpg",
+        "jerseyNumber" : 17,
+        "position": "Left Back",
+        "school": "Comilla Zilla School",
+        "batch" : 2023,
+        "age": 19,
+        "nationality": "Bangladesh",
+        "preferredFoot": "Right"
+    },
+    {
+        "id": 10,
+        "name": "Omar",
+        "photoURL": "https://i.ibb.co.com/v6jRnTX5/player-omar.jpg",
         "jerseyNumber" : 17,
         "position": "Left Back",
         "school": "Comilla Zilla School",
@@ -96,6 +108,30 @@
         "preferredFoot": "Right"
     },
     {
+        "id": 16,
+        "name": "Shafee",
+        "photoURL": "https://i.ibb.co/tp98LwYQ/player-shafee.jpg",
+        "jerseyNumber" : 22,
+        "position": "Center Midfielder",
+        "school": "Comilla Modern High School",
+        "batch" : 2018,
+        "age": 23,
+        "nationality": "Bangladesh",
+        "preferredFoot": "Right"
+    },
+    {
+        "id": 17,
+        "name": "Abdullah",
+        "photoURL": "https://i.ibb.co/PsdxzGvB/player-abdul.jpg",
+        "jerseyNumber" : 19,
+        "position": "Center Midfielder",
+        "school": "Comilla Zilla School",
+        "batch" : 2018,
+        "age": 23,
+        "nationality": "Bangladesh",
+        "preferredFoot": "Right"
+    },
+    {
         "id": 9,
         "name": "Nafiz",
         "photoURL": "https://i.ibb.co.com/CNtNqvL/player-nafiz.jpg",
@@ -104,18 +140,6 @@
         "school": "Comilla Zilla School",
         "batch" : 2025,
         "age": 17,
-        "nationality": "Bangladesh",
-        "preferredFoot": "Right"
-    },
-    {
-        "id": 10,
-        "name": "Omar",
-        "photoURL": "https://i.ibb.co.com/v6jRnTX5/player-omar.jpg",
-        "jerseyNumber" : 17,
-        "position": "Center Midfielder",
-        "school": "Comilla Zilla School",
-        "batch" : 2024,
-        "age": 18,
         "nationality": "Bangladesh",
         "preferredFoot": "Right"
     },
