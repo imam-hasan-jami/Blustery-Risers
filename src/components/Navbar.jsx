@@ -1,8 +1,23 @@
-import React from "react";
+import React, { use } from "react";
 import { HiMenuAlt1 } from "react-icons/hi";
 import { Link, NavLink } from "react-router";
+import { AuthContext } from "../provider/AuthContext";
 
 const Navbar = () => {
+
+  const { user, logOut } = use(AuthContext);
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        alert("Logged out successfully");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+      });
+  };
 
     const links = (
       <>
@@ -73,16 +88,32 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <Link to="/" className="text-md lg:text-2xl font-semibold lg:font-bold lg:ml-4">BLUSTERY RISERS</Link>
+        <Link
+          to="/"
+          className="text-md lg:text-2xl font-semibold lg:font-bold lg:ml-4"
+        >
+          BLUSTERY RISERS
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 space-x-6">
-          {links}
-        </ul>
+        <ul className="menu menu-horizontal px-1 space-x-6">{links}</ul>
       </div>
       <div className="navbar-end">
         <Link to="/">
-          <img className="w-10 mr-4" src="https://i.ibb.co.com/wFjq79n6/blustery-logo-black.png" alt="" />
+          {user?.email ? (
+            <>
+              <span className="text-[10px]">{user.email}</span>
+              <div className="flex justify-end">
+                <button onClick={handleLogout} className="btn bg-red-500 text-white">Logout</button>
+              </div>
+            </>
+          ) : (
+            <img
+              className="w-10 mr-4"
+              src="https://i.ibb.co.com/wFjq79n6/blustery-logo-black.png"
+              alt=""
+            />
+          )}
         </Link>
       </div>
     </div>

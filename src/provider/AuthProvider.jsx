@@ -24,7 +24,7 @@ const AuthProvider = ({ children }) => {
 
     //fetch user data from server
     const fetchUserData = (email) => {
-      fetch(`http://localhost/users/${email}`)
+      fetch(`http://localhost:3000/users/${email}`)
         .then((res) => res.json())
         .then((data) => {
           setUser(data);
