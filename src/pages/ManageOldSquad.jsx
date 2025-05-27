@@ -32,7 +32,12 @@ const ManageOldSquad = () => {
                   >
                     Details
                   </Link>
-                  <button className="btn btn-neutral w-full">Edit</button>
+                  <Link
+                    to={`/update-old-player/${player._id}`}
+                    className="btn btn-neutral w-full"
+                  >
+                    Update
+                  </Link>
                   <button className="btn btn-error w-full">Delete</button>
                 </td>
               </tr>

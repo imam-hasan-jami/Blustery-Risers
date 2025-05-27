@@ -13,6 +13,7 @@ import Login from "../pages/Login";
 import AddOldPlayer from "../pages/AddOldPlayer";
 import ManageOldSquad from "../pages/ManageOldSquad";
 import OldPlayerDetails from "../pages/OldPlayerDetails";
+import UpdateOldPlayer from "../pages/UpdateOldPlayer";
 
 const router = createBrowserRouter([
   {
@@ -73,6 +74,12 @@ const router = createBrowserRouter([
         {
             path: "/add-old-player",
             Component: AddOldPlayer,
+        },
+        {
+            path: "/update-old-player/:id",
+            loader: ({ params }) => fetch(`http://localhost:3000/oldPlayers/${params.id}`),
+            hydrateFallbackElement: <Loading />,
+            Component: UpdateOldPlayer,
         },
         // {
         //     path: "/register",
