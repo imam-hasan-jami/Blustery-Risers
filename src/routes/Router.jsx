@@ -53,10 +53,10 @@ const router = createBrowserRouter([
             path: "/old-squad",
             Component: OldSquad,
         },
-        {
-            path: "/register",
-            Component: Register,
-        },
+        // {
+        //     path: "/register",
+        //     Component: Register,
+        // },
         {
             path: "/login",
             Component: Login,
