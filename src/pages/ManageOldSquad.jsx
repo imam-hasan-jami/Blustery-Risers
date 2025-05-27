@@ -1,8 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLoaderData } from "react-router";
 
 const ManageOldSquad = () => {
-  const players = useLoaderData();
+  const initialPlayers = useLoaderData();
+  const [players, setPlayers] = useState(initialPlayers);
+
+  const handleDelete = (_id) => {
+    const confirmDelete = window.confirm("Are you sure you want to delete this player?");
+    if (confirmDelete) {
+      fetch(`http://localhost:3000/oldPlayers/${_id}`, {
+        method: "DELETE",
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.deletedCount > 0) {
+            alert("Player deleted successfully!");
+            
+            setPlayers(players.filter(player => player._id !== _id));
+          }
+        })
+        .catch((error) => {
+          console.error("Error deleting player:", error);
+        });
+    }
+  }
 
   return (
     <div>
@@ -38,7 +59,7 @@ const ManageOldSquad = () => {
                   >
                     Update
                   </Link>
-                  <button className="btn btn-error w-full">Delete</button>
+                  <button onClick={() => handleDelete(player._id)} className="btn btn-error w-full">Delete</button>
                 </td>
               </tr>
             ))}
