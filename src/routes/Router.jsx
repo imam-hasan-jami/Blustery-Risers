@@ -11,6 +11,7 @@ import OldSquad from "../pages/OldSquad";
 import Register from "../pages/Register";
 import Login from "../pages/Login";
 import AddOldPlayer from "../pages/AddOldPlayer";
+import ManageOldSquad from "../pages/ManageOldSquad";
 
 const router = createBrowserRouter([
   {
@@ -52,7 +53,15 @@ const router = createBrowserRouter([
         },
         {
             path: "/old-squad",
+            loader: () => fetch("http://localhost:3000/oldPlayers"),
+            hydrateFallbackElement: <Loading />,
             Component: OldSquad,
+        },
+        {
+            path: "/manage-old-squad",
+            loader: () => fetch("http://localhost:3000/oldPlayers"),
+            hydrateFallbackElement: <Loading />,
+            Component: ManageOldSquad,
         },
         {
             path: "/add-old-player",
