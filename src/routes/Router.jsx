@@ -56,19 +56,19 @@ const router = createBrowserRouter([
         },
         {
             path: "/old-squad",
-            loader: () => fetch("http://localhost:3000/oldPlayers"),
+            loader: () => fetch("https://blustery-risers-server.vercel.app/oldPlayers"),
             hydrateFallbackElement: <Loading />,
             Component: OldSquad,
         },
         {
             path: "/old-player-details/:id",
-            loader: ({ params }) => fetch(`http://localhost:3000/oldPlayers/${params.id}`),
+            loader: ({ params }) => fetch(`https://blustery-risers-server.vercel.app/oldPlayers/${params.id}`),
             hydrateFallbackElement: <Loading />,
             Component: OldPlayerDetails,
         },
         {
             path: "/manage-old-squad",
-            loader: () => fetch("http://localhost:3000/oldPlayers"),
+            loader: () => fetch("https://blustery-risers-server.vercel.app/oldPlayers"),
             hydrateFallbackElement: <Loading />,
             element: <PrivateRoute><ManageOldSquad /></PrivateRoute>,
         },
@@ -78,7 +78,7 @@ const router = createBrowserRouter([
         },
         {
             path: "/update-old-player/:id",
-            loader: ({ params }) => fetch(`http://localhost:3000/oldPlayers/${params.id}`),
+            loader: ({ params }) => fetch(`https://blustery-risers-server.vercel.app/oldPlayers/${params.id}`),
             hydrateFallbackElement: <Loading />,
             element: <PrivateRoute><UpdateOldPlayer /></PrivateRoute>,
         },

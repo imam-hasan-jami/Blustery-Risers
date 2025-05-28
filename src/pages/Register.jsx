@@ -26,7 +26,7 @@ const Register = () => {
             lastSignInTime: result.user?.metadata?.lastSignInTime,
           };
 
-          fetch("http://localhost:3000/users", {
+          fetch("https://blustery-risers-server.vercel.app/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",

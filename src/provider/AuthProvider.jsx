@@ -24,7 +24,7 @@ const AuthProvider = ({ children }) => {
 
     //fetch user data from server
     const fetchUserData = (email) => {
-      fetch(`http://localhost:3000/users/${email}`)
+      fetch(`https://blustery-risers-server.vercel.app/users/${email}`)
         .then((res) => res.json())
         .then((data) => {
           setUser(data);
