@@ -14,7 +14,7 @@ const UpdateOldPlayer = () => {
       const formData = new FormData(form);
       const updatedPlayer = Object.fromEntries(formData.entries());
 
-      fetch(`http://localhost:3000/oldPlayers/${_id}`, {
+      fetch(`https://blustery-risers-server.vercel.app/${_id}`, {
         method: "PUT",
         headers: {
           "content-type": "application/json",

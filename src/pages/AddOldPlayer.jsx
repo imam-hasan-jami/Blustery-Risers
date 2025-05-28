@@ -12,7 +12,7 @@ const AddOldPlayer = () => {
 
         const newPlayer = Object.fromEntries(formData.entries());
 
-        fetch("http://localhost:3000/oldPlayers", {
+        fetch("https://blustery-risers-server.vercel.app/oldPlayers", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
