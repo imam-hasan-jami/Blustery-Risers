@@ -132,7 +132,35 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 space-x-6">{links}</ul>
+        <ul className="menu menu-horizontal px-1 space-x-6">
+          {links}
+          {user?.email ? (
+            <>
+              <li>
+                <NavLink
+                  to="/add-old-player"
+                  className={({ isActive }) =>
+                    isActive ? "bg-neutral text-white p-2 rounded-sm" : "p-2"
+                  }
+                >
+                  Add Old Player
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/manage-old-squad"
+                  className={({ isActive }) =>
+                    isActive ? "bg-neutral text-white p-2 rounded-sm" : "p-2"
+                  }
+                >
+                  Manage Old Squad
+                </NavLink>
+              </li>
+            </>
+          ) : (
+            <></>
+          )}
+        </ul>
       </div>
       <div className="navbar-end">
         <Link to="/">
