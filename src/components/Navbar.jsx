@@ -71,6 +71,16 @@ const Navbar = () => {
             Old Squad
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/login"
+            className={({ isActive }) =>
+              isActive ? "bg-neutral text-white font-semibold p-2 rounded-sm" : "bg-yellow-400 text-red-600 font-semibold p-2 rounded-sm"
+            }
+          >
+            Admin Login
+          </NavLink>
+        </li>
       </>
     );
 

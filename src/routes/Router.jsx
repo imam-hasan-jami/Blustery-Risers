@@ -14,6 +14,7 @@ import AddOldPlayer from "../pages/AddOldPlayer";
 import ManageOldSquad from "../pages/ManageOldSquad";
 import OldPlayerDetails from "../pages/OldPlayerDetails";
 import UpdateOldPlayer from "../pages/UpdateOldPlayer";
+import PrivateRoute from "../provider/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -69,17 +70,17 @@ const router = createBrowserRouter([
             path: "/manage-old-squad",
             loader: () => fetch("http://localhost:3000/oldPlayers"),
             hydrateFallbackElement: <Loading />,
-            Component: ManageOldSquad,
+            element: <PrivateRoute><ManageOldSquad /></PrivateRoute>,
         },
         {
             path: "/add-old-player",
-            Component: AddOldPlayer,
+            element: <PrivateRoute><AddOldPlayer /></PrivateRoute>,
         },
         {
             path: "/update-old-player/:id",
             loader: ({ params }) => fetch(`http://localhost:3000/oldPlayers/${params.id}`),
             hydrateFallbackElement: <Loading />,
-            Component: UpdateOldPlayer,
+            element: <PrivateRoute><UpdateOldPlayer /></PrivateRoute>,
         },
         // {
         //     path: "/register",
