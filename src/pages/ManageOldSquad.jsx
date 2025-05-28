@@ -8,14 +8,14 @@ const ManageOldSquad = () => {
   const handleDelete = (_id) => {
     const confirmDelete = window.confirm("Are you sure you want to delete this player?");
     if (confirmDelete) {
-      fetch(`http://localhost:3000/oldPlayers/${_id}`, {
+      fetch(`https://blustery-risers-server.vercel.app/oldPlayers/${_id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
         .then((data) => {
           if (data.deletedCount > 0) {
             alert("Player deleted successfully!");
-            
+
             setPlayers(players.filter(player => player._id !== _id));
           }
         })
