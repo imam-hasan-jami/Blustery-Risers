@@ -28,7 +28,7 @@ const ManageOldSquad = () => {
   return (
     <div>
       <h2 className="text-3xl font-bold text-center my-5">Manage Old Squad</h2>
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto w-11/12 mx-auto">
         <table className="table">
           {/* head */}
           <thead>
@@ -49,17 +49,17 @@ const ManageOldSquad = () => {
                 <td className="flex flex-col lg:flex-row items-center gap-2">
                   <Link
                     to={`/old-player-details/${player._id}`}
-                    className="btn btn-info w-full"
+                    className="btn btn-info"
                   >
                     Details
                   </Link>
                   <Link
                     to={`/update-old-player/${player._id}`}
-                    className="btn btn-neutral w-full"
+                    className="btn btn-neutral"
                   >
                     Update
                   </Link>
-                  <button onClick={() => handleDelete(player._id)} className="btn btn-error w-full">Delete</button>
+                  <button onClick={() => handleDelete(player._id)} className="btn btn-error">Delete</button>
                 </td>
               </tr>
             ))}
