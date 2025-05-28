@@ -86,6 +86,32 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             {links}
+            {user?.email ? (
+              <>
+                <li>
+                  <NavLink
+                    to="/add-old-player"
+                    className={({ isActive }) =>
+                      isActive ? "bg-neutral text-white p-2 rounded-sm" : "p-2"
+                    }
+                  >
+                    Add Old Player
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    to="/manage-old-squad"
+                    className={({ isActive }) =>
+                      isActive ? "bg-neutral text-white p-2 rounded-sm" : "p-2"
+                    }
+                  >
+                    Manage Old Squad
+                  </NavLink>
+                </li>
+              </>
+            ) : (
+              <></>
+            )}
           </ul>
         </div>
         <Link
@@ -104,7 +130,12 @@ const Navbar = () => {
             <>
               <span className="text-[10px]">{user.email}</span>
               <div className="flex justify-end">
-                <button onClick={handleLogout} className="btn bg-red-500 text-white">Logout</button>
+                <button
+                  onClick={handleLogout}
+                  className="btn bg-red-500 text-white"
+                >
+                  Logout
+                </button>
               </div>
             </>
           ) : (
