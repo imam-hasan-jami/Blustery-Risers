@@ -1,5 +1,10 @@
 import React from "react";
 import CountUp from "react-countup";
+import matchPlayed from '../../public/match-played.json';
+import matchWon from '../../public/match-won.json';
+import matchDrawn from '../../public/match-drawn.json';
+import matchLost from '../../public/match-lost.json';
+import Lottie from "lottie-react";
 
 const MatchStat = () => {
   return (
@@ -9,8 +14,9 @@ const MatchStat = () => {
       </h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-2 lg:gap-12">
-        <div className="flex flex-col items-center bg-white px-12 py-10 rounded-2xl">
-          <img className="w-15" src="" alt="" />
+        <div className="bg-yellow-50 flex flex-col items-center bg-white px-12 py-12 rounded-2xl shadow-lg">
+          {/* <img className="w-15" src="" alt="" /> */}
+          <Lottie animationData={matchPlayed} loop={true} style={{ width: '200px', height: '130px' }} />
           <CountUp
             className="text-[64px] font-extrabold"
             start={0}
@@ -27,8 +33,8 @@ const MatchStat = () => {
           </CountUp>
           <p className="text-2xl font-semibold">Match Played</p>
         </div>
-        <div className="flex flex-col items-center bg-white px-12 py-10 rounded-2xl">
-          <img className="w-15" src="" alt="" />
+        <div className="bg-yellow-50 flex flex-col items-center bg-white px-12 py-12 rounded-2xl shadow-lg">
+          <Lottie animationData={matchWon} loop={true} style={{ width: '200px', height: '130px' }} />
           <CountUp
             className="text-[64px] font-extrabold"
             start={0}
@@ -44,8 +50,8 @@ const MatchStat = () => {
           </CountUp>
           <p className="text-2xl font-semibold">Match Won</p>
         </div>
-        <div className="flex flex-col items-center bg-white px-12 py-10 rounded-2xl">
-          <img className="w-15" src="" alt="" />
+        <div className="bg-yellow-50 flex flex-col items-center bg-white px-12 py-12 rounded-2xl shadow-lg">
+          <Lottie animationData={matchDrawn} loop={true} style={{ width: '200px', height: '130px' }} />
           <CountUp
             start={0}
             end={17}
@@ -60,8 +66,8 @@ const MatchStat = () => {
           </CountUp>
           <p className="text-2xl font-semibold">Match Drawn</p>
         </div>
-        <div className="flex flex-col items-center bg-white px-12 py-10 rounded-2xl">
-          <img className="w-15" src="" alt="" />
+        <div className="bg-yellow-50 flex flex-col items-center bg-white px-12 py-12 rounded-2xl shadow-lg">
+          <Lottie animationData={matchLost} loop={true} style={{ width: '200px', height: '130px' }} />
           <CountUp
             start={0}
             end={9}
