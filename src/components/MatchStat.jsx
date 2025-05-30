@@ -1,9 +1,9 @@
 import React from "react";
 import CountUp from "react-countup";
-import matchPlayed from '../../public/match-played.json';
-import matchWon from '../../public/match-won.json';
-import matchDrawn from '../../public/match-drawn.json';
-import matchLost from '../../public/match-lost.json';
+import matchPlayed from '../assets/match-played.json';
+import matchWon from '../assets/match-won.json';
+import matchDrawn from '../assets/match-drawn.json';
+import matchLost from '../assets/match-lost.json';
 import Lottie from "lottie-react";
 
 const MatchStat = () => {
