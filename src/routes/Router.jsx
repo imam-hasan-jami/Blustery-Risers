@@ -15,6 +15,7 @@ import ManageOldSquad from "../pages/ManageOldSquad";
 import OldPlayerDetails from "../pages/OldPlayerDetails";
 import UpdateOldPlayer from "../pages/UpdateOldPlayer";
 import PrivateRoute from "../provider/PrivateRoute";
+import RegisterPlayer from "../pages/RegisterPlayer";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
         {
             path: "/achievements",
             Component: Achievements,
+        },
+        {
+            path: "/register-player",
+            Component: RegisterPlayer,
         },
         {
             path: "/old-squad",
