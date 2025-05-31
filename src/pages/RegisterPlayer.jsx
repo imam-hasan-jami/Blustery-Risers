@@ -1,7 +1,44 @@
-import React from "react";
+import Lottie from "lottie-react";
+import React, { useState } from "react";
 import { MdImage } from "react-icons/md";
+import checkMark from "../assets/check-mark.json";
+import loadingSpinner from "../assets/loading-spinner.json";
 
 const RegisterPlayer = () => {
+  const [uploadingPhoto, setUploadingPhoto] = useState(false);
+  const [photoUploaded, setPhotoUploaded] = useState(false);
+//   const [photoURL, setPhotoURL] = useState("");
+
+  const handleFileUpload = async (e) => {
+    const file = e.target.files[0];
+
+    if (!file) {
+      return;
+    }
+
+    setUploadingPhoto(true);
+
+    const data = new FormData();
+    data.append("file", file);
+    data.append("upload_preset", "blustery_risers_player_registration");
+    data.append("cloud_name", "dmutxr6xq");
+
+    const res = await fetch(
+      "https://api.cloudinary.com/v1_1/dmutxr6xq/image/upload",
+      {
+        method: "POST",
+        body: data,
+      }
+    );
+
+    const uploadedPhotoURL = await res.json();
+    console.log(uploadedPhotoURL.url);
+    // setPhotoURL(uploadedPhotoURL.url);
+    setPhotoUploaded(true);
+    setUploadingPhoto(false);
+    e.target.value = "";
+  };
+
   return (
     <div className="my-10">
       <h1 className="text-center font-bold text-3xl my-7">
@@ -108,9 +145,28 @@ const RegisterPlayer = () => {
             <label className="label mt-5">Upload your photo</label>
             <div className="border-2 border-dashed border-gray-300 rounded-lg p-4">
               <div className="flex justify-center items-center my-6">
-                <MdImage size={50} />
+                {uploadingPhoto ? (
+                  <Lottie
+                    animationData={loadingSpinner}
+                    loop={true}
+                    style={{ height: "53px", width: "53px" }}
+                  />
+                ) : photoUploaded ? (
+                  <Lottie
+                    animationData={checkMark}
+                    loop={false}
+                    style={{ height: "50px", width: "50px" }}
+                  />
+                ) : (
+                  <MdImage size={50} />
+                )}
+                {/* <MdImage size={50} /> */}
               </div>
-              <input type="file" className="file-input mt-6" />
+              <input
+                onChange={handleFileUpload}
+                type="file"
+                className="file-input mt-6"
+              />
             </div>
           </div>
         </fieldset>
