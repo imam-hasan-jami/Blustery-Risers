@@ -7,7 +7,40 @@ import loadingSpinner from "../assets/loading-spinner.json";
 const RegisterPlayer = () => {
   const [uploadingPhoto, setUploadingPhoto] = useState(false);
   const [photoUploaded, setPhotoUploaded] = useState(false);
-//   const [photoURL, setPhotoURL] = useState("");
+  const [photoURL, setPhotoURL] = useState("");
+
+  const handleAddPlayer = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const newPlayer = Object.fromEntries(formData.entries());
+
+    newPlayer.photoURL = photoURL;
+
+    // console.log("New Player Data:", newPlayer);
+
+    fetch("http://localhost:3000/players", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newPlayer),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.insertedId) {
+          alert("Player registered successfully");
+          form.reset();
+          setPhotoUploaded(false);
+          setPhotoURL("");
+        //   console.log("Player registered successfully:", data);
+        }
+      })
+      .catch((error) => {
+        console.error("Error registering player:", error);
+      });
+  };
 
   const handleFileUpload = async (e) => {
     const file = e.target.files[0];
@@ -32,8 +65,8 @@ const RegisterPlayer = () => {
     );
 
     const uploadedPhotoURL = await res.json();
-    console.log(uploadedPhotoURL.url);
-    // setPhotoURL(uploadedPhotoURL.url);
+    // console.log(uploadedPhotoURL.url);
+    setPhotoURL(uploadedPhotoURL.url);
     setPhotoUploaded(true);
     setUploadingPhoto(false);
     e.target.value = "";
@@ -45,7 +78,7 @@ const RegisterPlayer = () => {
         Player Registration
       </h1>
 
-      <form>
+      <form onSubmit={handleAddPlayer}>
         <fieldset className="fieldset grid grid-cols-2 gap-8 bg-base-200 border-base-300 rounded-box w-6/12 mx-auto border p-8">
           <div>
             <label className="label">Name</label>
