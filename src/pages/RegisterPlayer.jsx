@@ -3,7 +3,7 @@ import { MdImage } from "react-icons/md";
 
 const RegisterPlayer = () => {
   return (
-    <div className="min-h-screen mt-10">
+    <div className="my-10">
       <h1 className="text-center font-bold text-3xl my-7">
         Player Registration
       </h1>
