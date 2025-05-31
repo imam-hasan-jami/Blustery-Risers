@@ -73,16 +73,6 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
-            to="/register-player"
-            className={({ isActive }) =>
-              isActive ? "bg-neutral text-white p-2 rounded-sm" : "p-2"
-            }
-          >
-            Register Player
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
             to="/login"
             className={({ isActive }) =>
               isActive ? "bg-neutral text-white font-semibold p-2 rounded-sm" : "bg-yellow-400 text-red-600 font-semibold p-2 rounded-sm"
