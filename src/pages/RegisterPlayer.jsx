@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { MdImage } from "react-icons/md";
 import checkMark from "../assets/check-mark.json";
 import loadingSpinner from "../assets/loading-spinner.json";
+import Swal from "sweetalert2";
 
 const RegisterPlayer = () => {
   const [uploadingPhoto, setUploadingPhoto] = useState(false);
@@ -36,7 +37,14 @@ const RegisterPlayer = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          alert("Player registered successfully");
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Player registered successfully!",
+            showConfirmButton: false,
+            timer: 2000,
+          });
+
           form.reset();
           setPhotoUploaded(false);
           setPhotoURL("");
@@ -79,7 +87,7 @@ const RegisterPlayer = () => {
       .then((res) => res.text())
       .then((data) => {
         console.log(data);
-        alert("Data submitted successfully");
+        // alert("Data submitted successfully");
       })
       .catch((error) => {
         console.log(error);
