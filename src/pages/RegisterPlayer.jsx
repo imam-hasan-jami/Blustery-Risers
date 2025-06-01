@@ -9,8 +9,14 @@ const RegisterPlayer = () => {
   const [photoUploaded, setPhotoUploaded] = useState(false);
   const [photoURL, setPhotoURL] = useState("");
 
-  const handleAddPlayer = (e) => {
+  const handleFormSubmit = (e) => {
     e.preventDefault();
+    handleAddPlayer(e);
+    handleGoogleSpreadsheet(e);
+  };
+
+  const handleAddPlayer = (e) => {
+    // e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
 
@@ -39,6 +45,44 @@ const RegisterPlayer = () => {
       })
       .catch((error) => {
         console.error("Error registering player:", error);
+      });
+  };
+
+  const handleGoogleSpreadsheet = (e) => {
+    const url = import.meta.env.VITE_GOOGLE_SHEET_URL;
+    fetch(url, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "content-type": "application/x-www-form-urlencoded",
+      },
+      body: `Name=${encodeURIComponent(
+        e.target.name.value
+      )}&School=${encodeURIComponent(
+        e.target.school.value
+      )}&Batch=${encodeURIComponent(
+        e.target.batch.value
+      )}&Position=${encodeURIComponent(
+        e.target.position.value
+      )}&JerseyNumber=${encodeURIComponent(
+        e.target.jerseyNumber.value
+      )}&PreferredFoot=${encodeURIComponent(
+        e.target.preferredFoot.value
+      )}&DateOfBirth=${encodeURIComponent(
+        e.target.dateOfBirth.value
+      )}&ContactNumber=${encodeURIComponent(
+        e.target.contactNumber.value
+      )}&Email=${encodeURIComponent(
+        e.target.email.value
+      )}&PhotoURL=${encodeURIComponent(photoURL)}`,
+    })
+      .then((res) => res.text())
+      .then((data) => {
+        console.log(data);
+        alert("Data submitted successfully");
+      })
+      .catch((error) => {
+        console.log(error);
       });
   };
 
@@ -78,7 +122,7 @@ const RegisterPlayer = () => {
         Player Registration
       </h1>
 
-      <form onSubmit={handleAddPlayer}>
+      <form onSubmit={handleFormSubmit}>
         <fieldset className="fieldset grid grid-cols-2 gap-8 bg-base-200 border-base-300 rounded-box w-6/12 mx-auto border p-8">
           <div>
             <label className="label">Name</label>
@@ -146,7 +190,7 @@ const RegisterPlayer = () => {
               required
             >
               <option value="" disabled>
-                Select Your Preffered Foot
+                Select Your Preferred Foot
               </option>
               <option value="right">Right</option>
               <option value="left">Left</option>
