@@ -227,6 +227,8 @@ const RegisterPlayer = () => {
               placeholder="Your Email Address (Optional)"
             />
 
+            <input type="hidden" name="FormType" value="players" />
+
             <label className="label mt-5">Upload your photo</label>
             <div className="border-2 border-dashed border-gray-300 rounded-lg p-4">
               <div className="flex justify-center items-center my-6">
