@@ -79,7 +79,8 @@ const router = createBrowserRouter([
         },
         {
             path: "/add-old-player",
-            element: <PrivateRoute><AddOldPlayer /></PrivateRoute>,
+            // element: <PrivateRoute><AddOldPlayer /></PrivateRoute>,
+            Component: AddOldPlayer,
         },
         {
             path: "/update-old-player/:id",

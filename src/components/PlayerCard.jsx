@@ -101,7 +101,7 @@ const PlayerCard = ({ player }) => {
             />
           </div>
           <div className="flex-1 text-white">
-            <h3 className="text-xl font-bold">{name}</h3>
+            <h3 className="text-xl font-bold uppercase">{name}</h3>
             <p className="text-blue-100 font-medium">{school}</p>
             <span
               className={`inline-block px-3 py-1 rounded-full text-xs font-semibold border mt-2 ${getPositionColor(
