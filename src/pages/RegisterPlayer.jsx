@@ -27,7 +27,7 @@ const RegisterPlayer = () => {
 
     // console.log("New Player Data:", newPlayer);
 
-    fetch("http://localhost:3000/players", {
+    fetch("https://blustery-risers-server.vercel.app/players", {
       method: "POST",
       headers: {
         "content-type": "application/json",

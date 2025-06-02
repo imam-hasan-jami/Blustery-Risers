@@ -27,7 +27,7 @@ const router = createBrowserRouter([
             index: true,
             Component: Home,
             loader: async () => {
-              const playersResponse = await fetch("http://localhost:3000/players");
+              const playersResponse = await fetch("https://blustery-risers-server.vercel.app/players");
               const players = await playersResponse.json();
               
               const reviewsResponse = await fetch("/reviews.json");
