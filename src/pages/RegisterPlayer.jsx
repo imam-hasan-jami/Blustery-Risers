@@ -64,7 +64,7 @@ const RegisterPlayer = () => {
       headers: {
         "content-type": "application/x-www-form-urlencoded",
       },
-      body: `Name=${encodeURIComponent(
+      body: `formType=players&Name=${encodeURIComponent(
         e.target.name.value
       )}&School=${encodeURIComponent(
         e.target.school.value
@@ -227,7 +227,7 @@ const RegisterPlayer = () => {
               placeholder="Your Email Address (Optional)"
             />
 
-            <input type="hidden" name="FormType" value="players" />
+            {/* <input type="hidden" name="FormType" value="players" /> */}
 
             <label className="label mt-5">Upload your photo</label>
             <div className="border-2 border-dashed border-gray-300 rounded-lg p-4">
