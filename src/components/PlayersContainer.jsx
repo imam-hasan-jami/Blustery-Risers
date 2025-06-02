@@ -18,7 +18,7 @@ const PlayersContainer = () => {
   return (
     <div className="lg:w-10/12 lg:mx-auto mt-15 lg:mt-25">
       <h1 className="text-2xl lg:text-4xl font-bold font-grotesk">Players</h1>
-      <div className="grid grid-cols-1 lg:grid-cols-3 mt-4 gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-3 mt-4 gap-8">
         {
             displayPlayers.map((player) => (
                 <PlayerCard key={player.id} player={player} />

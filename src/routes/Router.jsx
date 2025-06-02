@@ -27,7 +27,7 @@ const router = createBrowserRouter([
             index: true,
             Component: Home,
             loader: async () => {
-              const playersResponse = await fetch("/players.json");
+              const playersResponse = await fetch("http://localhost:3000/players");
               const players = await playersResponse.json();
               
               const reviewsResponse = await fetch("/reviews.json");
