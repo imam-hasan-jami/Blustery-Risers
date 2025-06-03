@@ -131,7 +131,7 @@ const RegisterPlayer = () => {
       </h1>
 
       <form onSubmit={handleFormSubmit}>
-        <fieldset className="fieldset grid grid-cols-2 gap-8 bg-base-200 border-base-300 rounded-box w-6/12 mx-auto border p-8">
+        <fieldset className="fieldset grid lg:grid-cols-2 gap-6 lg:gap-8 bg-base-200 border-base-300 rounded-box w-10/12 lg:w-6/12 mx-auto border p-4 lg:p-8">
           <div>
             <label className="label">Name</label>
             <input
