@@ -8,43 +8,37 @@ import { useLoaderData } from "react-router";
 
 const UpdatePlayer = () => {
 
-  const { _id, photoURL, name, position, jerseyNumber, school, dateOfBirth, contactNumber, batch, preferredFoot, email } = useLoaderData();
+  const { _id, name, position, jerseyNumber, school, dateOfBirth, contactNumber, batch, preferredFoot, email, photoURL: existingPhotoURL } = useLoaderData();
 
   const [uploadingPhoto, setUploadingPhoto] = useState(false);
   const [photoUploaded, setPhotoUploaded] = useState(false);
-//   const [photoURL, setPhotoURL] = useState("");
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    handleAddPlayer(e);
-    handleGoogleSpreadsheet(e);
-  };
+  const [photoURL, setPhotoURL] = useState(existingPhotoURL || "");
 
   const handleAddPlayer = (e) => {
-    // e.preventDefault();
+    e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
 
-    const newPlayer = Object.fromEntries(formData.entries());
+    const updatedPlayer = Object.fromEntries(formData.entries());
 
-    newPlayer.photoURL = photoURL;
+    updatedPlayer.photoURL = photoURL;
 
     // console.log("New Player Data:", newPlayer);
 
-    fetch("https://blustery-risers-server.vercel.app/players", {
-      method: "POST",
+    fetch(`https://blustery-risers-server.vercel.app/players/${_id}`, {
+      method: "PUT",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(newPlayer),
+      body: JSON.stringify(updatedPlayer),
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data.insertedId) {
+        if (data.modifiedCount) {
           Swal.fire({
             position: "center",
             icon: "success",
-            title: "Player registered successfully!",
+            title: "Information updated successfully!",
             showConfirmButton: false,
             timer: 2000,
           });
@@ -57,44 +51,6 @@ const UpdatePlayer = () => {
       })
       .catch((error) => {
         console.error("Error registering player:", error);
-      });
-  };
-
-  const handleGoogleSpreadsheet = (e) => {
-    const url = import.meta.env.VITE_GOOGLE_SHEET_URL;
-    fetch(url, {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "content-type": "application/x-www-form-urlencoded",
-      },
-      body: `formType=players&Name=${encodeURIComponent(
-        e.target.name.value
-      )}&School=${encodeURIComponent(
-        e.target.school.value
-      )}&Batch=${encodeURIComponent(
-        e.target.batch.value
-      )}&Position=${encodeURIComponent(
-        e.target.position.value
-      )}&JerseyNumber=${encodeURIComponent(
-        e.target.jerseyNumber.value
-      )}&PreferredFoot=${encodeURIComponent(
-        e.target.preferredFoot.value
-      )}&DateOfBirth=${encodeURIComponent(
-        e.target.dateOfBirth.value
-      )}&ContactNumber=${encodeURIComponent(
-        e.target.contactNumber.value
-      )}&Email=${encodeURIComponent(
-        e.target.email.value
-      )}&PhotoURL=${encodeURIComponent(photoURL)}`,
-    })
-      .then((res) => res.text())
-      .then((data) => {
-        console.log(data);
-        // alert("Data submitted successfully");
-      })
-      .catch((error) => {
-        console.log(error);
       });
   };
 
@@ -134,7 +90,7 @@ const UpdatePlayer = () => {
         Update Player Information
       </h1>
 
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleAddPlayer}>
         <fieldset className="fieldset grid lg:grid-cols-2 gap-6 lg:gap-8 bg-base-200 border-base-300 rounded-box w-10/12 lg:w-6/12 mx-auto border p-4 lg:p-8">
           <div>
             <label className="label">Name</label>
@@ -168,7 +124,12 @@ const UpdatePlayer = () => {
             />
 
             <label className="label mt-5">Position</label>
-            <select name="position" className="select" defaultValue={position} required>
+            <select
+              name="position"
+              className="select"
+              defaultValue={position}
+              required
+            >
               <option value="" disabled>
                 Select Your Position
               </option>
@@ -216,7 +177,13 @@ const UpdatePlayer = () => {
 
           <div>
             <label className="label">Date of Birth:</label>
-            <input name="dateOfBirth" className="input" type="date" defaultValue={dateOfBirth} required />
+            <input
+              name="dateOfBirth"
+              className="input"
+              type="date"
+              defaultValue={dateOfBirth}
+              required
+            />
 
             <label className="label mt-5">Contact Number</label>
             <input
@@ -251,6 +218,12 @@ const UpdatePlayer = () => {
                     animationData={checkMark}
                     loop={false}
                     style={{ height: "50px", width: "50px" }}
+                  />
+                ) : existingPhotoURL ? (
+                  <img
+                    src={existingPhotoURL}
+                    alt="Current player"
+                    className="h-20 w-20 object-cover rounded-full"
                   />
                 ) : (
                   <MdImage size={50} />
