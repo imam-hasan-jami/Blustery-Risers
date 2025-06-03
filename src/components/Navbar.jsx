@@ -71,16 +71,6 @@ const Navbar = () => {
             Old Squad
           </NavLink>
         </li>
-        <li>
-          <NavLink
-            to="/login"
-            className={({ isActive }) =>
-              isActive ? "bg-neutral text-white font-semibold p-2 rounded-sm" : "bg-yellow-400 text-red-600 font-semibold p-2 rounded-sm"
-            }
-          >
-            Admin Login
-          </NavLink>
-        </li>
       </>
     );
 
@@ -96,6 +86,20 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             {links}
+            {!user && (
+              <li>
+                <NavLink
+                  to="/login"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "bg-neutral text-white font-semibold p-2 rounded-sm"
+                      : "bg-yellow-400 text-red-600 font-semibold p-2 rounded-sm"
+                  }
+                >
+                  Admin Login
+                </NavLink>
+              </li>
+            )}
             {user?.email ? (
               <>
                 <li>
@@ -134,6 +138,20 @@ const Navbar = () => {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-6">
           {links}
+          {!user && (
+            <li>
+              <NavLink
+                to="/login"
+                className={({ isActive }) =>
+                  isActive
+                    ? "bg-neutral text-white font-semibold p-2 rounded-sm"
+                    : "bg-yellow-400 text-red-600 font-semibold p-2 rounded-sm"
+                }
+              >
+                Admin Login
+              </NavLink>
+            </li>
+          )}
           {user?.email ? (
             <>
               <li>
