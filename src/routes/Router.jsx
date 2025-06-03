@@ -16,6 +16,8 @@ import OldPlayerDetails from "../pages/OldPlayerDetails";
 import UpdateOldPlayer from "../pages/UpdateOldPlayer";
 import PrivateRoute from "../provider/PrivateRoute";
 import RegisterPlayer from "../pages/RegisterPlayer";
+import ManagePlayers from "../pages/ManagePlayers";
+import UpdatePlayer from "../pages/UpdatePlayer";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +60,18 @@ const router = createBrowserRouter([
         {
             path: "/register-player",
             Component: RegisterPlayer,
+        },
+        {
+            path: "/manage-players",
+            loader: () => fetch("https://blustery-risers-server.vercel.app/players"),
+            hydrateFallbackElement: <Loading />,
+            element: <PrivateRoute><ManagePlayers /></PrivateRoute>,
+        },
+        {
+            path: "/update-player/:id",
+            loader: ({ params }) => fetch(`https://blustery-risers-server.vercel.app/players/${params.id}`),
+            hydrateFallbackElement: <Loading />,
+            element: <PrivateRoute><UpdatePlayer /></PrivateRoute>,
         },
         {
             path: "/old-squad",

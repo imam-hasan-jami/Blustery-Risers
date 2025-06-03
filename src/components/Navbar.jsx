@@ -174,6 +174,16 @@ const Navbar = () => {
                   Manage Old Squad
                 </NavLink>
               </li>
+              <li>
+                <NavLink
+                  to="/manage-players"
+                  className={({ isActive }) =>
+                    isActive ? "bg-neutral text-white p-2 rounded-sm" : "p-2"
+                  }
+                >
+                  Manage Players
+                </NavLink>
+              </li>
             </>
           ) : (
             <></>
