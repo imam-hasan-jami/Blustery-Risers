@@ -89,10 +89,10 @@ const PlayerCard = ({ player }) => {
   //   </div>
   // );
   return (
-    <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 overflow-hidden group">
+    <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-blue-100 overflow-hidden group">
       <div className="bg-gradient-to-r from-blue-500 to-indigo-600 p-6 relative overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
-        <div className="relative z-10 flex items-center space-x-4">
+        <div className="relative z-10 flex items-center space-x-6">
           <div className="relative">
             <img
               src={photoURL}
@@ -140,7 +140,7 @@ const PlayerCard = ({ player }) => {
           <div className="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-xl border border-green-200">
             <div className="flex items-center space-x-2 mb-2">
               <GiRunningShoe size={20} className="text-green-600" />
-              <span className="text-green-600 font-semibold text-sm">Foot</span>
+              <span className="text-green-600 font-semibold text-sm">Preferred Foot</span>
             </div>
             <p className={`text-lg font-bold capitalize text-green-700`}>
               {preferredFoot}

@@ -63,7 +63,7 @@ const OldSquad = () => {
           <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-yellow-400 overflow-hidden group">
                 <div className="bg-gradient-to-t from-amber-300 to-yellow-300 p-6 relative overflow-hidden">
                   <div className="absolute inset-0 bg-black/10"></div>
-                  <div className="relative z-10 flex items-center space-x-4">
+                  <div className="relative z-10 flex items-center space-x-6">
                     <div className="relative">
                       <img
                         src={player.photoURL}
